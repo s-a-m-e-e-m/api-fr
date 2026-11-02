@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        @apply bg-gray-100 text-gray-800;
+    }
+
+    * {
+        @apply box-border;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded-lg font-medium transition duration-200 cursor-pointer;
+    }
+
+    .btn-primary {
+        @apply px-4 py-2 rounded-lg font-medium transition duration-200 cursor-pointer bg-blue-600 text-white hover:bg-blue-700;
+    }
+
+    .btn-success {
+        @apply px-4 py-2 rounded-lg font-medium transition duration-200 cursor-pointer bg-green-600 text-white hover:bg-green-700;
+    }
+
+    .btn-danger {
+        @apply px-4 py-2 rounded-lg font-medium transition duration-200 cursor-pointer bg-red-600 text-white hover:bg-red-700;
+    }
+
+    .btn-secondary {
+        @apply px-4 py-2 rounded-lg font-medium transition duration-200 cursor-pointer bg-gray-200 text-gray-800 hover:bg-gray-300;
+    }
+
+    /* ------- Inputs ------- */
+
+    .input {
+        @apply w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200;
+    }
+
+    .textarea {
+        @apply w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 resize-y min-h-28;
+    }
+
+    .select {
+        @apply w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 bg-white;
+    }
+
+    .checkbox {
+        @apply h-5 w-5 cursor-pointer accent-blue-600;
+    }
+
+    /* ------- Cards ------- */
+
+    .card {
+        @apply bg-white rounded-xl shadow-md p-6;
+    }
+
+    .page-title {
+        @apply text-3xl font-bold text-gray-800;
+    }
+
+    .selection-title {
+        @apply text-xl font-semibold text-gray-700;
+    }
+
+    /* ------- Status Badges ------- */
+
+    .badge {
+        @apply px-3 py-1 rounded-full text-sm font-semibold;
+    }
+
+    .badge-up {
+        @apply px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-700;
+    }
+
+    .badge-down {
+        @apply px-3 py-1 rounded-full text-sm font-semibold bg-red-100 text-red-700;
+    }
+
+    .badge-warning {
+        @apply px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-700;
+    }
+
+    .badge-info {
+        @apply px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-700;
+    }
+
+    /* ------- Tables ------- */
+
+    .table {
+        @apply w-full border-collapse;
+    }
+
+    .table th {
+        @apply bg-gray-200 px-4 py-3 text-left;
+    }
+
+    .table td {
+        @apply border-b border-gray-200 px-4 py-3;
+    }
+
+    .table tr:hover {
+        @apply bg-gray-50;
+    }
+
+    /* ------- Forms ------- */
+
+    .form-group {
+        @apply flex flex-col gap-2;
+    }
+
+    .form-label {
+        @apply font-medium text-gray-700;
+    }
+
+    /* ------- Layout ------- */
+
+    .container {
+        @apply max-w-7xl mx-auto px-6;
+    }
+
+    .page {
+        @apply max-w-7xl mx-auto px-6 py-8;
+    }
+
+    /* ------- Empty State ------- */
+
+    .empty-state {
+        @apply flex flex-col items-center justify-center text-center py-12 text-gray-500;
+    }
+
+    /* ------- Loader ------- */
+
+    .loader {
+        @apply flex justify-center items-center min-h-screen;
+    }
+}
